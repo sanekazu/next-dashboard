@@ -5,7 +5,12 @@ import {
   ExclamationCircleIcon,
 } from '@heroicons/react/24/outline';
 import { ArrowRightIcon } from '@heroicons/react/20/solid';
-import { Button } from './button';
+import { Button } from '@/app/ui/button';
+import { authenticate } from '@/app/lib/actions';
+import { useFormState, useFormStatus } from 'react-dom';
+
+
+'use client';
 
 export default function LoginForm() {
   return (
@@ -42,7 +47,7 @@ export default function LoginForm() {
               Password
             </label>
             <div className="relative">
-              <input
+              <input@
                 className="peer block w-full rounded-md border border-gray-200 py-[9px] pl-10 text-sm outline-2 placeholder:text-gray-500"
                 id="password"
                 type="password"
